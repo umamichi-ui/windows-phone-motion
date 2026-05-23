@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-05-24
+
+### Changed
+
+- Route Turnstile/Slide presets target the whole-page `root` snapshot instead of per-element groups.
+- Apply `data-wpm-route` / `data-wpm-nav-direction` immediately on link click and `popstate`.
+- Stop disabling `::view-transition-old/new(root)` so navigations always animate.
+
 ## [0.1.0] - 2026-05-24
 
 First public release.

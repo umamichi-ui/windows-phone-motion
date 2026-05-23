@@ -1,6 +1,6 @@
 /**
  * View Transitions: Slide + fade (Toolkit SlideLeft/Right FadeIn/Out).
- * Forward: new content from right; back: new content from left.
+ * Whole-page root snapshot. Forward: new from right; back: new from left.
  */
 
 @keyframes wpm-slide-forward-in {
@@ -48,27 +48,19 @@
 }
 
 @supports (view-transition-name: none) {
-	html[data-wpm-route='slide'][data-wpm-nav-direction='forward']::view-transition-old(article),
-	html[data-wpm-route='slide'][data-wpm-nav-direction='forward']::view-transition-old(title),
-	html[data-wpm-route='slide'][data-wpm-nav-direction='forward']::view-transition-old(prev-next) {
+	html[data-wpm-route='slide'][data-wpm-nav-direction='forward']::view-transition-old(root) {
 		animation: wpm-slide-forward-out var(--wpm-slide-horizontal-duration) var(--wpm-ease-out-exp6) both;
 	}
 
-	html[data-wpm-route='slide'][data-wpm-nav-direction='forward']::view-transition-new(article),
-	html[data-wpm-route='slide'][data-wpm-nav-direction='forward']::view-transition-new(title),
-	html[data-wpm-route='slide'][data-wpm-nav-direction='forward']::view-transition-new(prev-next) {
+	html[data-wpm-route='slide'][data-wpm-nav-direction='forward']::view-transition-new(root) {
 		animation: wpm-slide-forward-in var(--wpm-slide-horizontal-duration) var(--wpm-ease-out-exp6) both;
 	}
 
-	html[data-wpm-route='slide'][data-wpm-nav-direction='back']::view-transition-old(article),
-	html[data-wpm-route='slide'][data-wpm-nav-direction='back']::view-transition-old(title),
-	html[data-wpm-route='slide'][data-wpm-nav-direction='back']::view-transition-old(prev-next) {
+	html[data-wpm-route='slide'][data-wpm-nav-direction='back']::view-transition-old(root) {
 		animation: wpm-slide-back-out var(--wpm-slide-horizontal-duration) var(--wpm-ease-out-exp6) both;
 	}
 
-	html[data-wpm-route='slide'][data-wpm-nav-direction='back']::view-transition-new(article),
-	html[data-wpm-route='slide'][data-wpm-nav-direction='back']::view-transition-new(title),
-	html[data-wpm-route='slide'][data-wpm-nav-direction='back']::view-transition-new(prev-next) {
+	html[data-wpm-route='slide'][data-wpm-nav-direction='back']::view-transition-new(root) {
 		animation: wpm-slide-back-in var(--wpm-slide-horizontal-duration) var(--wpm-ease-out-exp6) both;
 	}
 }

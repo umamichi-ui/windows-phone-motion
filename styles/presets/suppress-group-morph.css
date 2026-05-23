@@ -15,13 +15,4 @@
 	html[data-wpm-route]::view-transition-image-pair(*) {
 		animation: none !important;
 	}
-
-	/*
-	 * Astro/VT also animates the default root snapshot; turn off so named regions
-	 * (article, header, …) are not double-covered by a whole-page crossfade + morph.
-	 */
-	html[data-wpm-route]::view-transition-old(root),
-	html[data-wpm-route]::view-transition-new(root) {
-		animation: none !important;
-	}
 }

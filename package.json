@@ -1,6 +1,6 @@
 {
   "name": "@umamichi-ui/windows-phone-motion",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Windows Phone Toolkit–derived motion tokens and CSS presets for Umamichi UI web projects.",
   "type": "module",
   "license": "MIT",

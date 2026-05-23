@@ -87,13 +87,16 @@ function onDocumentClick(event) {
 		return;
 	}
 
+	const route = resolveRoutePresetFromSource(target);
 	pendingDirection = 'forward';
-	pendingRoutePreset = resolveRoutePresetFromSource(target);
+	pendingRoutePreset = route;
+	applyRouteTransition('forward', route);
 }
 
 function onPopState() {
 	pendingDirection = 'back';
 	pendingRoutePreset = null;
+	applyRouteTransition('back', 'turnstile');
 }
 
 function onBeforePreparation(event) {
