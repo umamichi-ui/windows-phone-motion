@@ -2,7 +2,7 @@
 
 > 本文本由 LLM 生成，未经人工检查，请谨慎对待
 
-CSS motion tokens and presets derived from the Windows Phone Toolkit page transitions (Ms-PL), for Umamichi UI web projects.
+CSS motion tokens and presets derived from the [Windows Phone Toolkit page transitions](https://github.com/MicrosoftArchive/WindowsPhoneToolkit) (Ms-PL), for Umamichi UI web projects.
 
 ## Install
 
