@@ -1,0 +1,25 @@
+/**
+ * Left overlay pane + content push (SlideLeftFadeIn timing).
+ * Apply class wpm-pane-host on a container or use data-wpm-pane on <html> for site-specific rules.
+ */
+
+.wpm-pane-menu {
+	transition:
+		transform var(--wpm-pane-duration) var(--wpm-ease-out-exp6),
+		visibility 0s linear var(--wpm-pane-duration);
+}
+
+.wpm-pane-menu.is-open,
+html[data-mobile-menu-open='true'] .wpm-pane-menu {
+	transition:
+		transform var(--wpm-pane-duration) var(--wpm-ease-out-exp6),
+		visibility 0s linear 0s;
+}
+
+.wpm-pane-dimmer {
+	transition: opacity var(--wpm-pane-dimmer-duration) var(--wpm-ease-out-exp6);
+}
+
+.wpm-pane-shift {
+	transition: transform var(--wpm-pane-duration) var(--wpm-ease-out-exp6);
+}

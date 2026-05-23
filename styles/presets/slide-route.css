@@ -1,0 +1,74 @@
+/**
+ * View Transitions: Slide + fade (Toolkit SlideLeft/Right FadeIn/Out).
+ * Forward: new content from right; back: new content from left.
+ */
+
+@keyframes wpm-slide-forward-in {
+	from {
+		opacity: 0;
+		transform: translateX(var(--wpm-slide-offset));
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes wpm-slide-forward-out {
+	from {
+		opacity: 1;
+		transform: translateX(0);
+	}
+	to {
+		opacity: 0;
+		transform: translateX(calc(var(--wpm-slide-offset) * -1));
+	}
+}
+
+@keyframes wpm-slide-back-in {
+	from {
+		opacity: 0;
+		transform: translateX(calc(var(--wpm-slide-offset) * -1));
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes wpm-slide-back-out {
+	from {
+		opacity: 1;
+		transform: translateX(0);
+	}
+	to {
+		opacity: 0;
+		transform: translateX(var(--wpm-slide-offset));
+	}
+}
+
+@supports (view-transition-name: none) {
+	html[data-wpm-route='slide'][data-wpm-nav-direction='forward']::view-transition-old(article),
+	html[data-wpm-route='slide'][data-wpm-nav-direction='forward']::view-transition-old(title),
+	html[data-wpm-route='slide'][data-wpm-nav-direction='forward']::view-transition-old(prev-next) {
+		animation: wpm-slide-forward-out var(--wpm-slide-horizontal-duration) var(--wpm-ease-out-exp6) both;
+	}
+
+	html[data-wpm-route='slide'][data-wpm-nav-direction='forward']::view-transition-new(article),
+	html[data-wpm-route='slide'][data-wpm-nav-direction='forward']::view-transition-new(title),
+	html[data-wpm-route='slide'][data-wpm-nav-direction='forward']::view-transition-new(prev-next) {
+		animation: wpm-slide-forward-in var(--wpm-slide-horizontal-duration) var(--wpm-ease-out-exp6) both;
+	}
+
+	html[data-wpm-route='slide'][data-wpm-nav-direction='back']::view-transition-old(article),
+	html[data-wpm-route='slide'][data-wpm-nav-direction='back']::view-transition-old(title),
+	html[data-wpm-route='slide'][data-wpm-nav-direction='back']::view-transition-old(prev-next) {
+		animation: wpm-slide-back-out var(--wpm-slide-horizontal-duration) var(--wpm-ease-out-exp6) both;
+	}
+
+	html[data-wpm-route='slide'][data-wpm-nav-direction='back']::view-transition-new(article),
+	html[data-wpm-route='slide'][data-wpm-nav-direction='back']::view-transition-new(title),
+	html[data-wpm-route='slide'][data-wpm-nav-direction='back']::view-transition-new(prev-next) {
+		animation: wpm-slide-back-in var(--wpm-slide-horizontal-duration) var(--wpm-ease-out-exp6) both;
+	}
+}

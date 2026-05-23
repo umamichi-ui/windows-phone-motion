@@ -1,0 +1,7 @@
+/**
+ * Approximations of ExponentialEase EasingMode EaseOut/EaseIn, Exponent=6 (Windows Phone Toolkit).
+ */
+:root {
+	--wpm-ease-out-exp6: cubic-bezier(0.19, 1, 0.22, 1);
+	--wpm-ease-in-exp6: cubic-bezier(0.75, 0, 0.85, 0.4);
+}

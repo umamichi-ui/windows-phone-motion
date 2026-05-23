@@ -1,0 +1,27 @@
+/**
+ * Disable UA-generated ::view-transition-group position/size morph so route
+ * presets read as Turnstile/Slide (Toolkit page transitions), not shared-element layout slides.
+ */
+
+@supports (view-transition-name: none) {
+	html[data-wpm-route]::view-transition-group(*) {
+		animation: none !important;
+	}
+
+	/*
+	 * UA crossfade on image-pair stacks with ::view-transition-old/new presets;
+	 * disable so Turnstile/Slide opacity+transform on snapshots is authoritative.
+	 */
+	html[data-wpm-route]::view-transition-image-pair(*) {
+		animation: none !important;
+	}
+
+	/*
+	 * Astro/VT also animates the default root snapshot; turn off so named regions
+	 * (article, header, …) are not double-covered by a whole-page crossfade + morph.
+	 */
+	html[data-wpm-route]::view-transition-old(root),
+	html[data-wpm-route]::view-transition-new(root) {
+		animation: none !important;
+	}
+}

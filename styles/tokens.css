@@ -1,0 +1,37 @@
+/**
+ * @umamichi-ui/windows-phone-motion — design tokens
+ * Sources: Windows Phone Toolkit Storyboards; TurnstileFeatherEffect.cs; Win8.1 generic.xaml (chrome).
+ */
+:root {
+	/* Turnstile page navigation (TurnstileForwardIn/Out, TurnstileBackwardIn/Out) */
+	--wpm-turnstile-in-duration: 350ms;
+	--wpm-turnstile-out-duration: 250ms;
+	--wpm-turnstile-in-angle: -80deg;
+	--wpm-turnstile-out-angle-forward: 50deg;
+	--wpm-turnstile-in-angle-backward: 50deg;
+	--wpm-turnstile-out-angle-backward: -80deg;
+	--wpm-turnstile-perspective: 1200px;
+
+	/* Slide page navigation (Slide*FadeIn/Out) */
+	--wpm-slide-offset: 200px;
+	--wpm-slide-vertical-duration: 350ms;
+	--wpm-slide-horizontal-duration: 500ms;
+
+	/* Turnstile feather (TurnstileFeatherEffect) */
+	--wpm-feather-in-duration: 350ms;
+	--wpm-feather-out-duration: 250ms;
+	--wpm-feather-forward-in-delay: 40ms;
+	--wpm-feather-forward-out-delay: 50ms;
+	--wpm-feather-backward-in-delay: 50ms;
+	--wpm-feather-backward-out-delay: 40ms;
+	--wpm-feather-in-angle: -80deg;
+	--wpm-feather-out-angle-forward: 50deg;
+	--wpm-feather-rotate-origin-x: -20%;
+
+	/* Overlay pane (SlideLeftFadeIn timing) */
+	--wpm-pane-duration: var(--wpm-slide-horizontal-duration);
+	--wpm-pane-dimmer-duration: var(--wpm-slide-horizontal-duration);
+
+	/* Chrome reposition (nav indicator) */
+	--wpm-chrome-reposition-duration: 350ms;
+}

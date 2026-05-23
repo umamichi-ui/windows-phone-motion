@@ -1,0 +1,32 @@
+/**
+ * In-page feather entrance (Toolkit TurnstileFeatherEffect forward-in).
+ * Use data-wpm-feather-index="0" on children inside .wpm-feather.
+ */
+
+@keyframes wpm-feather-in {
+	from {
+		opacity: 0;
+		transform: perspective(var(--wpm-turnstile-perspective)) rotateY(var(--wpm-feather-in-angle));
+	}
+	to {
+		opacity: 1;
+		transform: perspective(var(--wpm-turnstile-perspective)) rotateY(0deg);
+	}
+}
+
+.wpm-feather > [data-wpm-feather-index] {
+	transform-origin: var(--wpm-feather-rotate-origin-x) center;
+}
+
+.wpm-feather.wpm-feather-active > [data-wpm-feather-index] {
+	animation: wpm-feather-in var(--wpm-feather-in-duration) var(--wpm-ease-out-exp6) both;
+	animation-delay: calc(var(--wpm-feather-forward-in-delay) * var(--wpm-feather-index, 0));
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.wpm-feather.wpm-feather-active > [data-wpm-feather-index] {
+		animation: none;
+		opacity: 1;
+		transform: none;
+	}
+}

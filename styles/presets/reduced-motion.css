@@ -1,0 +1,21 @@
+@media (prefers-reduced-motion: reduce) {
+	html[data-wpm-route]::view-transition-group(*),
+	html[data-wpm-route]::view-transition-old(*),
+	html[data-wpm-route]::view-transition-new(*) {
+		animation: none !important;
+	}
+
+	.wpm-pane-menu,
+	.wpm-pane-dimmer,
+	.wpm-pane-shift {
+		transition-duration: 1ms !important;
+	}
+}
+
+html[data-wpm-motion-suppressed='true'],
+html[data-wpm-motion-suppressed='true'] *,
+html[data-wpm-motion-suppressed='true'] *::before,
+html[data-wpm-motion-suppressed='true'] *::after {
+	animation: none !important;
+	transition: none !important;
+}

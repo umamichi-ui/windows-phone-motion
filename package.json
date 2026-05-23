@@ -1,0 +1,47 @@
+{
+  "name": "@umamichi-ui/windows-phone-motion",
+  "version": "0.1.0",
+  "description": "Windows Phone Toolkit–derived motion tokens and CSS presets for Umamichi UI web projects.",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umamichi-ui/windows-phone-motion.git"
+  },
+  "homepage": "https://github.com/umamichi-ui/windows-phone-motion#readme",
+  "bugs": {
+    "url": "https://github.com/umamichi-ui/windows-phone-motion/issues"
+  },
+  "keywords": [
+    "css",
+    "view-transitions",
+    "windows-phone",
+    "motion",
+    "umamichi"
+  ],
+  "files": [
+    "styles",
+    "navigation.js",
+    "README.md",
+    "CHANGELOG.md",
+    "ATTRIBUTION.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": "./styles/index.css",
+    "./tokens.css": "./styles/tokens.css",
+    "./easing.css": "./styles/easing.css",
+    "./presets/turnstile-route.css": "./styles/presets/turnstile-route.css",
+    "./presets/slide-route.css": "./styles/presets/slide-route.css",
+    "./presets/feather.css": "./styles/presets/feather.css",
+    "./presets/pane-left.css": "./styles/presets/pane-left.css",
+    "./presets/reduced-motion.css": "./styles/presets/reduced-motion.css",
+    "./presets/suppress-group-morph.css": "./styles/presets/suppress-group-morph.css",
+    "./navigation": "./navigation.js"
+  },
+  "sideEffects": [
+    "*.css"
+  ]
+}
